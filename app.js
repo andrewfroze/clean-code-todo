@@ -29,6 +29,7 @@ const createNewTaskElement = function (taskText) {
 
   deleteButton.className = 'delete';
   deleteButtonImg.src = './remove.svg';
+  deleteButtonImg.alt = '';
   deleteButton.appendChild(deleteButtonImg);
 
   taskItem.appendChild(completionCheckbox);
