@@ -1,6 +1,6 @@
 const newTaskInput = document.getElementById('new-task');
 const addNewTaskButton = document.getElementById('add-new-task');
-const incompleteTasksList = document.getElementById('incompleteTasks');
+const incompleteTasksList = document.getElementById('incomplete-tasks');
 const completedTasksList = document.getElementById('completed-tasks');
 
 const createNewTaskElement = function (taskText) {
