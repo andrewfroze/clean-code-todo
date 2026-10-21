@@ -51,7 +51,7 @@ const addTask = function () {
 };
 
 const editTask = function () {
-  const taskItem = this.parentNode;
+  const taskItem = this.closest('li');
 
   const taskEditInput = taskItem.querySelector('input[type=text]');
   const label = taskItem.querySelector('label');
@@ -73,9 +73,7 @@ const editTask = function () {
 };
 
 const deleteTask = function () {
-  const taskItem = this.parentNode;
-  const taskList = taskItem.parentNode;
-  taskList.removeChild(taskItem);
+  this.closest('li').remove();
 };
 
 const toggleTask = function (event) {
