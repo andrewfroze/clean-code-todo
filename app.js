@@ -57,7 +57,11 @@ const editTask = function () {
   const editButton = taskItem.querySelector('.edit');
   const isEditMode = taskItem.classList.contains('editMode');
   if (isEditMode) {
-    label.innerText = taskEditInput.value;
+    const taskText = taskEditInput.value.trim();
+
+    if (!taskText) return;
+
+    label.innerText = taskText;
     editButton.innerText = 'Edit';
   } else {
     taskEditInput.value = label.innerText;
