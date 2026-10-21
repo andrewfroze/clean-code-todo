@@ -87,16 +87,16 @@ const toggleTask = function (event) {
 
 addNewTaskButton.addEventListener('click', addTask);
 
-const attachTaskEventListeners = function (taskListItem, checkBoxEventHandler) {
+const attachTaskEventListeners = function (taskListItem) {
   const completionCheckbox = taskListItem.querySelector('input[type=checkbox]');
   const editButton = taskListItem.querySelector('button.edit');
   const deleteButton = taskListItem.querySelector('button.delete');
 
   editButton.addEventListener('click', editTask);
   deleteButton.addEventListener('click', deleteTask);
-  completionCheckbox.addEventListener('change', checkBoxEventHandler);
+  completionCheckbox.addEventListener('change', toggleTask);
 };
 
 for (const task of [...completedTasksList.children, ...incompleteTasksList.children]) {
-  attachTaskEventListeners(task, toggleTask);
+  attachTaskEventListeners(task);
 }
