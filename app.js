@@ -93,10 +93,6 @@ const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   checkBox.addEventListener('change', checkBoxEventHandler);
 };
 
-for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
-  bindTaskEvents(incompleteTaskHolder.children[i], toggleTask);
-}
-
-for (let i = 0; i < completedTasksHolder.children.length; i++) {
-  bindTaskEvents(completedTasksHolder.children[i], toggleTask);
+for (const task of [...completedTasksHolder.children, ...incompleteTaskHolder.children]) {
+  bindTaskEvents(task, toggleTask);
 }
