@@ -2,6 +2,9 @@
 name: Manual AI Code Review
 
 on:
+  push:
+      branches:
+        - "clean-code-todo"
   workflow_dispatch:
     inputs:
       pr_number:
