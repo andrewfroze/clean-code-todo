@@ -60,6 +60,7 @@ const editTask = function () {
   if (isEditMode) {
     const taskText = taskEditInput.value.trim();
 
+    // edit mode should stay enabled for blank input
     if (!taskText) return;
 
     label.innerText = taskText;
