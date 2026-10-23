@@ -1,4 +1,5 @@
 {
+  "name": "clean-code-todo",
   "type": "module",
   "scripts": {
     "lint": "eslint .",
