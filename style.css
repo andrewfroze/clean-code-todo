@@ -106,7 +106,7 @@ label[for='new-task'] {
   margin: 0 0 20px;
 }
 
-input#new-task {
+input#new-task-input {
   width: 318px;
 }
 
