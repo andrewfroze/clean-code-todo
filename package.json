@@ -18,11 +18,11 @@
   },
   "lint-staged": {
     "*.{js,mjs,cjs}": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint",
+      "prettier --check"
     ],
     "*.{html,css,json,md}": [
-      "prettier --write"
+      "prettier --check"
     ]
   }
 }
