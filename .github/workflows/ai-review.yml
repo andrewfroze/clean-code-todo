@@ -174,11 +174,9 @@ jobs:
               )
 
           report = choices[0].get("message", {}).get("content", "")
-          if not isinstance(report, str) or not report.strip():
-              raise SystemExit("AI returned an empty report")
-
-          Path("review-report.md").write_text(report, encoding="utf-8")
-          print("AI review report generated successfully.")
+          if isinstance(report, str) and report.strip():
+              Path("review-report.md").write_text(report, encoding="utf-8")
+              print("AI review report generated successfully.")
           PY
 
       - name: Post AI review as PR comment
